@@ -1,5 +1,5 @@
+set nocompatible
 " Autoinstall of plug
-
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -31,6 +31,11 @@ set t_Co=256
 
 set scrolloff=1
 set wrap
+
+"Paste Toggle
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
 
 nnoremap <leader><space> :nohlsearch<CR>
 
